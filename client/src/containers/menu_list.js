@@ -243,8 +243,6 @@ class MenuList extends Component {
         }
 
         const pictures = (item) => {
-
-            console.log(item)
                
             return (
     
@@ -345,6 +343,8 @@ class MenuList extends Component {
 
     render () {
 
+        console.log('this.state.newPage: ', this.state.newPage)
+
         if(!this.props) return <div/>;    
 
         if(this.state.newPage) 
@@ -396,7 +396,7 @@ class MenuList extends Component {
                     
             </div>
                 
-                <Bill openStatus = { this.state.showModal } menuChecked = { this.state.name_price }>
+                <Bill openStatus = { this.state.showModal } menuChecked = { this.state.name_price } newPageStatus = {() => { this.setState ({ newPage : true })}}>
 
                     <div className = 'btn-floating btn-small red' onClick = { this.handleCloseModal.bind(this) } >
                         <i className="small material-icons">arrow_back</i>

@@ -81,7 +81,7 @@ class Bill extends Component {
 
         // From children object
         //this.props.children._self.state.newPage = true;
-        this.props.children._self.newPage = true;
+       this.props.newPageStatus();
 
         this.props.children._self.handleCloseModal();
 
