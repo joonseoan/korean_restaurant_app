@@ -80,7 +80,8 @@ class Bill extends Component {
         this.props.storeOrders(menuOrdered);
 
         // From children object
-        this.props.children._self.state.newPage = true;
+        //this.props.children._self.state.newPage = true;
+        this.props.children._self.newPage = true;
 
         this.props.children._self.handleCloseModal();
 
