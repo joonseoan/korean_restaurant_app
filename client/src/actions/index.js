@@ -17,7 +17,7 @@ import { FETCH_GUESTBOOKS,
          USER_LOGIN,
          FETCH_LOGIN_GUESTBOOK } from './fetch_guestbooks';
 
-const TodayURL = `http://api.openweathermap.org/data/2.5/weather?appid=${Open_Weather_Key}`;
+const TodayURL = `https://api.openweathermap.org/data/2.5/weather?appid=${Open_Weather_Key}`;
 const GoogleURL = 'https://maps.googleapis.com/maps/api/geocode/json?address';
 // const guestbookURL = 'https://vast-wave-33154.herokuapp.com';
 
