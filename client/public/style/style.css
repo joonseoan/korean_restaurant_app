@@ -1,0 +1,82 @@
+.branch {
+
+    margin: 20px;
+}
+
+
+.select-branch {
+    padding-left: 20px;
+    margin: 10px;
+}
+
+.google-map .google-map-pic {
+
+    width : 300px;
+    height: 500px;
+}
+
+.today-special img {
+
+    width: 250px;
+    height: auto;
+
+}
+
+.all-menu td {
+
+        border-left: 2px solid red;
+        padding: 10px;
+        
+
+}
+
+#all-pictures {
+
+    border-bottom: 2px solid red;
+    padding: 10px;
+
+}
+
+.input-checkbox:checked {
+
+    height: 30px;
+    width : 30px;
+
+}
+
+td.input-checkbox:checked {
+
+    background-color: blue;
+
+}
+
+#number-input {
+
+    display: none;
+    
+}
+
+span:first-of-type {
+
+    visibility: hidden;
+
+}
+
+div.center {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+}
+
+.button-css {
+
+    position: relative !important;
+    z-index: 12;
+    opacity: 1 !important;
+    left: 18px !important;
+    
+}
+

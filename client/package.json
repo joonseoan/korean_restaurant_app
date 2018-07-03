@@ -1,0 +1,40 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": {
+    "/guests/login": {
+      "target": "http://localhost:3006"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dark-sky-api": "^0.6.21",
+    "express": "^4.16.3",
+    "file-system": "^2.2.2",
+    "form": "^0.2.4",
+    "lodash": "^4.17.10",
+    "materialize-css": "^0.100.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-google-maps": "^9.4.5",
+    "react-modal": "^3.4.5",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^1.1.4",
+    "react-select-me": "^0.10.3",
+    "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
+    "redux-promise": "^0.6.0",
+    "redux-promise-middleware": "^5.1.1",
+    "redux-thunk": "^2.3.0",
+    "validator": "^10.4.0",
+    "write-json-file": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
