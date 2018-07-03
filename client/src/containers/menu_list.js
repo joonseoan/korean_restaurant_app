@@ -174,6 +174,7 @@ class MenuList extends Component {
                 const eachButton = buttons.map(button => {
     
                     return <span key = { button } 
+
                         onClick = { this.numberOnChange.bind(this) } 
                         id = { removeSpace(item.name) } 
                         className = "btn red lighten-2" style = {{width : '30px', height : '30px'}}>
@@ -339,6 +340,7 @@ class MenuList extends Component {
     handleCloseModal() {
 
         this.setState ({ showModal : false });
+
     }
 
     render () {
@@ -396,9 +398,9 @@ class MenuList extends Component {
                     
             </div>
                 
-                <Bill openStatus = { this.state.showModal } menuChecked = { this.state.name_price } newPageStatus = {() => { this.setState ({ newPage : true })}}>
+                <Bill openStatus = { this.state.showModal } menuChecked = { this.state.name_price } newPageStatus = {() => { this.setState ({ newPage : true, showModal : false  })}}>
 
-                    <div className = 'btn-floating btn-small red' onClick = { this.handleCloseModal.bind(this) } >
+                         <div className = 'btn-floating btn-small red' onClick = { this.handleCloseModal.bind(this) } >
                         <i className="small material-icons">arrow_back</i>
                     </div>
 
