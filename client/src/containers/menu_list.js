@@ -35,6 +35,8 @@ class MenuList extends Component {
 
         const { name, value, checked } = event.target;
 
+        //console.log ('vlue and check: ', value, checked)
+
         const label = document.querySelector(`label.${removeSpace(name)}`);
 
         let number = Number(label.innerHTML); 
@@ -57,6 +59,7 @@ class MenuList extends Component {
 
         } else {
 
+          //  this.refs.ordered.checked
             current_name_price = [ ...current_name_price, { name, value, checked, number } ];
 
         }
@@ -77,6 +80,7 @@ class MenuList extends Component {
                     .style.backgroundColor = color;
 
         document.querySelector(`div.${removeSpace(name)}`).style.display = `${!checked ? 'none' : 'block'}`;
+        
         
     }
     
@@ -250,18 +254,18 @@ class MenuList extends Component {
                 <td key = { item.name } className = { removeSpace(item.name) } id = "all-pictures" width = '200' >
                     <Link to = { `/description/${item.name}`} key = { item.id }>
 
-                    <div className = 'btn' style = {{ marginBottom : '20px'}}>
-                
-                        Check Detail
-                        <i className="small material-icons" style = {{ verticalAlign : 'middle',
-                        marginLeft : '10px' }}>check</i>
-                
-                    </div>
-                          
-                       <img src = { path + item.file } alt = { item.name } width = '150' height = '100'
-                        style = {{ border: '1px solid #ddd', borderRadius: '4px', padding: '5px'}} 
-                            className = 'responsive-image'
-                        />
+                        <div className = 'btn' style = {{ marginBottom : '20px'}}>
+                    
+                            Check Detail
+                            <i className="small material-icons" style = {{ verticalAlign : 'middle',
+                            marginLeft : '10px' }}>check</i>
+                    
+                        </div>
+                            
+                        <img src = { path + item.file } alt = { item.name } width = '150' height = '100'
+                            style = {{ border: '1px solid #ddd', borderRadius: '4px', padding: '5px'}} 
+                                className = 'responsive-image'
+                            />
             
                     </Link>
                 </td>
@@ -345,11 +349,10 @@ class MenuList extends Component {
 
     render () {
 
-        console.log('this.state.newPage: ', this.state.newPage)
-
         if(!this.props) return <div/>;    
 
         if(this.state.newPage) 
+
             return <Redirect to = 'thankyouAndGuestbook' menuChecked = { this.state.name_price }/>;     
         
         return (
@@ -357,6 +360,7 @@ class MenuList extends Component {
             <div className = 'card white darken-1'>
 
                 <div className = 'red lighten-2'>
+
                     <h4 className = 'center z-depth-4' style = {{ color : 'white',
                                                                  fontStyle : 'italic', 
                                                                  fontFamily : 'monospace' }}
@@ -398,10 +402,13 @@ class MenuList extends Component {
                     
             </div>
                 
-                <Bill openStatus = { this.state.showModal } menuChecked = { this.state.name_price } newPageStatus = {() => { this.setState ({ newPage : true, showModal : false  })}}>
+                <Bill openStatus = { this.state.showModal } menuChecked = { this.state.name_price } 
+                    newPageStatus = {() => { this.setState ({ newPage : true })}}>
 
-                         <div className = 'btn-floating btn-small red' onClick = { this.handleCloseModal.bind(this) } >
+                    <div className = 'btn-floating btn-small red' onClick = { this.handleCloseModal.bind(this) } >
+                        
                         <i className="small material-icons">arrow_back</i>
+                    
                     </div>
 
                 </Bill>  

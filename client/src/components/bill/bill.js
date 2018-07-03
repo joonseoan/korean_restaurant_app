@@ -137,7 +137,7 @@ class Bill extends Component {
                                                              fontStyle : 'italic'}}>
                     
                                                  
-                    <center>Your Reciet Anticipated</center>
+                    <center>Your Reciet Estimated</center>
                 
                 </h5>
 
@@ -158,16 +158,22 @@ class Bill extends Component {
 
                 </div>
 
-                <button type = 'submit' value = 'Submit Orders' 
-                        className = "btn blue right" onClick = { this.eventClick.bind(this)}
-                        style = {{ marginTop : '20px'}}        
-                
-                >
+                <div>
 
-                        Submit Order
-                        <i className="small material-icons" style = {{ verticalAlign : 'middle', marginLeft : '10px' }}>check_circle</i>
+                    <button type = 'submit' value = 'Submit Orders' 
+                            className = "btn blue right" onClick = { this.eventClick.bind(this)}
+                            style = {{ marginTop : '20px'}}        
+                    
+                    >
+                            Submit Order
+                            <i className="small material-icons" style = {{ verticalAlign : 'middle', marginLeft : '10px' }}>check_circle</i>
+                    
+                    </button>
                 
-                </button>
+                
+                </div>
+
+                
                 
             </Modal>
 

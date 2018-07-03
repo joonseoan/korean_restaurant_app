@@ -59,10 +59,6 @@ class BranchList extends Component {
     
     componentDidMount() {
 
-        // When reloading it is undefined.
-        // So We can start from Toronto again
-        //      even though localStorage is implemented.
-
         if (!branch_city) {
 
             branch_city = options[0].value;
