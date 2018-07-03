@@ -14,11 +14,7 @@ function roundData (weather) {
 
 function weatherImage(mainWeather) {
 
-    console.log(mainWeather)
-
     const image = regexFilter (mainWeather);
-
-    console.log('image: ', image)
 
     const src = `../images/${ image }.PNG`;
     
@@ -36,9 +32,6 @@ function TodayWeather (props) {
         const additionalWeather = props.additionalTodayWeather;
         const { lat, lng } = props.branchLocation.results[0].geometry.location; 
 
-        console.log('todayWeather: ', props.todayWeather)
-        console.log('additionalTodayWeather: ', props.additionalTodayWeather.weather[0].main)
-        
         return(
         
             <div className = 'card darken-1'>

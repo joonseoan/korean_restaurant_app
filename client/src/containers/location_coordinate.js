@@ -6,9 +6,6 @@ import TodayWeatherCoordinate from './today_weather_coordinate';
 class LocationCoordinate extends Component {
     
     render() {
-        
-        console.log('this.props at loca_coordi : ', this.props);
-
 
         if(!this.props.branchLocation)
         return <div>Loading...</div>;

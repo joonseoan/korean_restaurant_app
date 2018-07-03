@@ -45,8 +45,6 @@ class MenuList extends Component {
 
             current_name_price.forEach(menu => {
 
-                console.log('name:####### ', name + ', ' + menu.name);
-
             if (menu.name === name) {
 
                 const index = current_name_price.indexOf(menu);
@@ -245,6 +243,8 @@ class MenuList extends Component {
         }
 
         const pictures = (item) => {
+
+            console.log(item)
                
             return (
     
