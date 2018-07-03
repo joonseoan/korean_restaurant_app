@@ -19,7 +19,7 @@ import { FETCH_GUESTBOOKS,
 
 const TodayURL = `http://api.openweathermap.org/data/2.5/weather?appid=${Open_Weather_Key}`;
 const GoogleURL = 'https://maps.googleapis.com/maps/api/geocode/json?address';
-const guestbookURL = 'https://vast-wave-33154.herokuapp.com';
+// const guestbookURL = 'https://vast-wave-33154.herokuapp.com';
 
 export function location(branch_city) {
 
@@ -75,15 +75,21 @@ export function additionalTodayWeatherInfo (branch_city) {
 
 export function fetchGuesbookLists() {
 
-    const url = `${ guestbookURL }/guests`;
+    // const url = `${ guestbookURL }/guests`;
+
+    // const url = '/guests';
 
     // const url = 'http://localhost:3000/guests';
 
-    const request = axios.get(url);
+    const request = axios.get('/guests');
+
+    console.log('request: ', request);
 
     return ({
 
         type: FETCH_GUESTBOOKS,
+
+
         payload: request 
 
     });
@@ -92,11 +98,13 @@ export function fetchGuesbookLists() {
 
 export function createGuestbook(guestbook, callback) {
 
-    const url = `${ guestbookURL }/guests`;
+    // const url = `${ guestbookURL }/guests`;
 
     // const url = 'http://localhost:3000/guests';
 
-    const request = axios.post(url, guestbook)
+    // const url = '/guests';
+
+    const request = axios.post('/guests', guestbook)
         .then(() => {
 
             callback();
@@ -125,11 +133,13 @@ export function storeOrders(orders) {
 
 export function fetchGuestbook(id) {
 
-    const url = `${ guestbookURL }/guests/${ id }`;
+    // const url = `${ guestbookURL }/guests/${ id }`;
+
+    // const url = `/guests/${ id }`;
     
     // const url = `http://localhost:3000/guests/${id}`;
 
-    const request = axios.get(url);
+    const request = axios.get(`/guests/${ id }`);
 
     return ({
 
@@ -142,14 +152,16 @@ export function fetchGuestbook(id) {
 
 export function userGuestbookLogin(loginInfo, callback) {
 
-    const url = `${ guestbookURL }/guests/login`;
+    // const url = `${ guestbookURL }/guests/login`;
+
+    // const url = '/guests/login';
     
     // const url = 'http://localhost:3000/guests/login';
 
     return ({
 
         type : USER_LOGIN,
-        payload: axios.post(url, loginInfo).then(() => {
+        payload: axios.post('/guests/login', loginInfo).then(() => {
 
                callback();
 
@@ -161,11 +173,13 @@ export function userGuestbookLogin(loginInfo, callback) {
 
 export function fetchLoginUserGuestbooks() {
 
-    const url = `${ guestbookURL }/loginGuestbooks`;
+    // const url = `${ guestbookURL }/loginGuestbooks`;
+
+    // const url = '/guests/loginGuestbooks';
 
     // const url = 'http://localhost:3000/loginGuestbooks';
 
-    const request = axios.get(url);
+    const request = axios.get('/loginGuestbooks');
 
     console.log('request: ', request);
 
@@ -180,7 +194,9 @@ export function fetchLoginUserGuestbooks() {
 
 export function deleteLoginUserGuestbook(id, callback) {
 
-    axios.delete(`${ guestbookURL }/guests/${id}`)
+    // const url = `/guests/${ id }`;
+
+    axios.delete( `/guests/${ id }`)
         .then(() => {
 
             callback();

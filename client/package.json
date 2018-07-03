@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "proxy": {
-    "/guests/login": {
-      "target": "http://localhost:3006"
+    "/guests": {
+      "target": "http://localhost:3000"
+    },
+    "/loginGuestbooks": {
+      "target": "http://localhost:3000"
+    },
+    "/guests/*": {
+      "target": "http://localhost:3000"
     }
   },
   "dependencies": {

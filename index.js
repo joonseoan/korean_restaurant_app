@@ -17,11 +17,6 @@ app.use(bodyParser.json());
 
 // app.use(cors());
 
-const PORT = process.env.PORT || 3000;
-//console.log(`starting on ${PORT}`);
-app.listen(PORT);
-
-
 app.post('/guests', (req, res) => {
 
    const body = _.pick(req.body, [ 'food', 'like', 'dislike', 'title', 'comments', 'email', 'password', 
@@ -63,6 +58,8 @@ app.post('/guests', (req, res) => {
 });
 
 app.get('/guests', (req, res) => {
+
+    console.log('ggggggggggggggggggggggggggggggggggg');
 
     Guests.find({}).then( (list) =>{
 
@@ -198,5 +195,9 @@ if (process.env.NODE_ENV === 'production') {
     });
 
 }
+
+const PORT = process.env.PORT || 3000;
+console.log(`starting on ${PORT}`);
+app.listen(PORT);
 
 module.exports = { app };
