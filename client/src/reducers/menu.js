@@ -31,7 +31,7 @@ export default function() {
 
         drink : [
 
-            { id : 12, name : 'Soju', description : 'Korean pop liquor', price : 13.99, file : 'Soju_13.PNG', spicy : '', carlorie : 610 },
+            { id : 12, name : 'Soju', description : 'Korean pop liquor', price : 13.99, file : 'soju_13.PNG', spicy : '', carlorie : 610 },
             { id : 13, name : 'Beer', description : 'Canadian beer', price : 10.99, file : 'Beer_14.PNG', spicy : '', carlorie : 825 },
             { id : 14, name : 'Sake', description : 'Japanese pop liquor', price : 15.99, file : 'Sake_15.PNG', spicy : '', carlorie : 722 },
             { id : 15, name : 'Soda', description : 'Diverse Soda and Water', price : 5.99, file : 'Soda_16.PNG', spicy : '', carlorie : 624 }  
