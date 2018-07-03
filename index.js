@@ -17,6 +17,10 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+const PORT = process.env.PORT || 3000;
+//console.log(`starting on ${PORT}`);
+app.listen(PORT);
+
 
 app.post('/guests', (req, res) => {
 
@@ -194,9 +198,5 @@ if (process.env.NODE_ENV === 'production') {
     });
 
 }
-
-const PORT = process.env.PORT || 3000;
-//console.log(`starting on ${PORT}`);
-app.listen(PORT);
 
 module.exports = { app };
