@@ -1,5 +1,5 @@
 // It is an interim solution to give permission to the localhost front end.
-const cors = require('cors');
+// const cors = require('cors');
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -15,7 +15,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use(cors());
+// app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 //console.log(`starting on ${PORT}`);
