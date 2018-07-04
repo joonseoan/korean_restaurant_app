@@ -23,8 +23,6 @@ class GuestbookNewCreated extends Component {
     // field values are delivered in a defining order down below.
     renderInputField(fields) {
 
-        console.log(fields)
-
         const { meta : { touched, error }} = fields;
 
         const className = `form-group ${ touched && error ? 'has-danger' : ''}`;
