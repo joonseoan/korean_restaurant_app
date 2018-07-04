@@ -126,55 +126,52 @@ class Bill extends Component {
             <Modal isOpen = { this.props.openStatus } style = { { content : { width : '40%',        
                                                         margin : 'auto'}}}>
 
-                <div>
-                
-                    { this.props.children }
+                <section>
+
+                    <div>
                     
-                </div>
-               
-                <h5 ref = { subtitle => subtitle } style = {{textDecoration : 'underline',
-                                                             fontFamily : 'monospace',
-                                                             fontStyle : 'italic'}}>
+                        { this.props.children }
+                        
+                    </div>
+                
+                    <h5 ref = { subtitle => subtitle } style = {{textDecoration : 'underline',
+                                                                fontFamily : 'monospace',
+                                                                fontStyle : 'italic'}}>
+                                                
+                        <center>Your Reciet Estimated</center>
                     
-                                                 
-                    <center>Your Reciet Estimated</center>
-                
-                </h5>
+                    </h5>
 
-                <div> 
-                
-                    { this.props.menuChecked.map(this.orderList.bind(this)) }
-                
-                </div>
-
-                <div className = 'right'>
-
-                    <p>----------------------------------------</p>
-
-                    <p style = {{ fontSize : '1.2em'}}>Total number of Orders : { this.numberOfOrders() }</p>
-                    <p style = {{ fontSize : '1.2em'}}>Total price: ${ rounding(this.totalAmount()) }</p>
-                    <p style = {{ fontSize : '1.2em'}}>HST: 15%</p>
-                    <p style = {{textDecoration : 'underline', color : 'blue', fontSize : '1.3em'}}>Total Payable: ${ rounding(this.totalAmount() * 1.15) }</p>
-
-                </div>
-
-                <div>
-
-                    <button type = 'submit' value = 'Submit Orders' 
-                            className = "btn blue right" onClick = { this.eventClick.bind(this)}
-                            style = {{ marginTop : '20px'}}        
+                    <div> 
                     
-                    >
-                            Submit Order
-                            <i className="small material-icons" style = {{ verticalAlign : 'middle', marginLeft : '10px' }}>check_circle</i>
+                        { this.props.menuChecked.map(this.orderList.bind(this)) }
                     
-                    </button>
-                
-                
-                </div>
+                    </div>
 
-                
-                
+                    <div className = 'right'>
+
+                        <p>----------------------------------------</p>
+
+                        <p style = {{ fontSize : '1.1em'}}>Total number of Orders : { this.numberOfOrders() }</p>
+                        <p style = {{ fontSize : '1.1em'}}>Total price: ${ rounding(this.totalAmount()) }</p>
+                        <p style = {{ fontSize : '1.1em'}}>HST: 15%</p>
+                        <p style = {{textDecoration : 'underline', color : 'blue', fontSize : '1.3em'}}>Total Payable: ${ rounding(this.totalAmount() * 1.15) }</p>
+
+                        <button type = 'submit' value = 'Submit Your Orders' 
+                                className = "btn blue right" onClick = { this.eventClick.bind(this)}
+                                style = {{ marginTop : '20px'}}        
+                        
+                        >
+
+                                Submit Order
+                                <i className="small material-icons" style = {{ verticalAlign : 'middle', marginLeft : '10px' }}>check_circle</i>
+                        
+                        </button>
+
+                    </div>
+
+                </section>
+
             </Modal>
 
         );

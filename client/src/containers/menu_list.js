@@ -31,6 +31,52 @@ class MenuList extends Component {
 
     }
 
+    componentDidMount() {
+
+        window.localStorage.setItem('menuChecked', JSON.stringify(this.state.name_price));
+
+        this.checkedValueControl(); 
+    }
+
+        // componentWillReceiveProps(nextProps) {
+
+        //     console.log('77777777777777777777777777777777')
+
+        //    //  window.localStorage.setItem('menuChecked', JSON.stringify(this.state.name_price));
+        //    // this.setLocalStorage()
+            
+
+        //     //window.localStorage.setItem('menuChecked', JSON.stringify(this.state.name_price));
+
+        //     // this.checkedValueControl(); 
+            
+
+        // }
+
+    checkedValueControl() {
+
+        const checkedValue = JSON.parse(window.localStorage.menuChecked);
+
+        console.log(checkedValue);
+
+        _.each(checkedValue, ({ name }) => {
+
+            const dd = document.querySelector(`input.${removeSpace(name)}`)
+            dd.checked = true;
+
+            const color = !dd.checked ? '' : '#FAFAD2';
+
+            document.querySelectorAll(`td.${removeSpace(name)}`)[0]
+                .style.backgroundColor = color;
+
+            document.querySelectorAll(`td.${removeSpace(name)}`)[1]
+                    .style.backgroundColor = color;
+
+        })
+
+
+    }
+
     menuOnChange(event) {
 
         const { name, value, checked } = event.target;
@@ -59,7 +105,6 @@ class MenuList extends Component {
 
         } else {
 
-          //  this.refs.ordered.checked
             current_name_price = [ ...current_name_price, { name, value, checked, number } ];
 
         }
@@ -72,7 +117,7 @@ class MenuList extends Component {
 
         const color = !checked ? '' : '#FAFAD2';
 
-        //no way to use react??
+
         document.querySelectorAll(`td.${removeSpace(name)}`)[0]
                 .style.backgroundColor = color;
 
@@ -220,7 +265,7 @@ class MenuList extends Component {
                                                                                color : "red"}}>add_circle_outline</i>    
                                 <b>{ item.name }</b> (${ item.price }) : <p>{ item.description }</p> 
                                     
-                                <input type = "checkbox" name = { item.name } 
+                                <input type = "checkbox" name = { item.name } className = { removeSpace(item.name) }
                                 value = { item.price }  onChange = { this.menuOnChange.bind(this)}/>
                       
                                 <div><h3>{this.state.order}</h3></div>
@@ -346,6 +391,12 @@ class MenuList extends Component {
         this.setState ({ showModal : false });
 
     }
+
+    /* setLocalStorage() {
+        
+        window.localStorage.setItem('menuChecked', JSON.stringify(this.state.name_price));
+
+    } */
 
     render () {
 

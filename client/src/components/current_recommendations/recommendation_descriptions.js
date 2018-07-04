@@ -12,6 +12,8 @@ class RecommendationDescriptions extends Component {
 
         this.props.fetchGuesbookLists();
 
+        console.log('this.props: ', this.props)
+
     }
 
     picList() {

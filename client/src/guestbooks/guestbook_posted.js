@@ -30,7 +30,6 @@ class GuestbookPosted extends Component {
 
 		}
 
-
 	}
 
 	deleteButton() {
@@ -46,7 +45,8 @@ class GuestbookPosted extends Component {
 					<i className="small material-icons" style = {{verticalAlign : 'middle',
                                                                 marginLeft : '10px'}}>
                                     delete
-                    </i>
+					</i>
+					
 				</div>
 
 		);
@@ -59,7 +59,7 @@ class GuestbookPosted extends Component {
 
 		this.props.deleteLoginUserGuestbook(_id, () => {
 
-			this.props.history.push({ pathname: '/emailPasswordInput', state: 'false' });
+			this.props.history.push({ pathname: '/emailPasswordInput', state : 'false' });
 
 		});
 

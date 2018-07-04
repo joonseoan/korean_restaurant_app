@@ -12,7 +12,7 @@ class App extends Component {
         return (
         
         <div>
-         
+            
             <div>  
                 <BranchList />
             </div>
@@ -20,7 +20,6 @@ class App extends Component {
             <div>
                 <RecommendationMenu />
             </div>
-
             <div>
                 <MenuList />
             </div>

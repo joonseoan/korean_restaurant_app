@@ -6,6 +6,7 @@ import _ from 'lodash';
 
 import { fetchGuesbookLists, userGuestbookLogin, fetchLoginUserGuestbooks } from '../actions/index';
 
+
 class EmailPasswordInput extends Component {
 
 	constructor(props) {
@@ -76,8 +77,6 @@ class EmailPasswordInput extends Component {
 	}
 
 	userGuestbookPosted(userGuestbooks) {
-
-		userGuestbooks.sort();
 		
 		let countNumber = 1;
 
@@ -91,13 +90,31 @@ class EmailPasswordInput extends Component {
 					<h2><center>Thank you for joining survey</center></h2>
 
 				</div>
+
 			);
 
 		}
 
 		if(userGuestbooks) {
 			
-			return userGuestbooks.reverse().map(post => {
+			let sortedGuestbooks;
+
+			_.each(userGuestbooks, time => {
+
+				time.visitedAt = time.visitedAt.slice(7,35).replace(', Time:', '');
+
+				sortedGuestbooks = userGuestbooks.sort((a, b) => {
+
+					const preDate = new Date(a.visitedAt).getTime();
+					const postDate = new Date(b.visitedAt).getTime();
+
+					return postDate - preDate;
+
+				});
+				
+			});
+
+			return sortedGuestbooks.map(post => {
 
 				return (
 

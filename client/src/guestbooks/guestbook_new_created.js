@@ -262,7 +262,7 @@ class GuestbookNewCreated extends Component {
 
         }
 
-        values.city = this.props.additionalTodayWeather.name;
+        values.city = this.props.additionalTodayWeather.name; 
 
         this.props.createGuestbook(values, () => {
 
