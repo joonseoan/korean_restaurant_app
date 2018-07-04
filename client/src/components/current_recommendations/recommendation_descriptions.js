@@ -12,8 +12,6 @@ class RecommendationDescriptions extends Component {
 
         this.props.fetchGuesbookLists();
 
-        console.log('this.props: ', this.props)
-
     }
 
     picList() {
@@ -197,8 +195,6 @@ class RecommendationDescriptions extends Component {
 }
 
 function mapStateToProps ({ menu, guestbooks }, ownProps) {
-
-    console.log('ownProps in description:', ownProps);
 
     let selectedMenu;
     let selectedMenuType;

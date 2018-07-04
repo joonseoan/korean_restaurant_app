@@ -67,7 +67,6 @@ class GuestbookPosted extends Component {
 
 	render() {
 
-		console.log('this.props.guestbook', this.props.guestbook);
 		const { food, title, comments, visitedAt } = this.props.guestbook;
 		
 		if(!this.props) return <div>Loading....</div>;

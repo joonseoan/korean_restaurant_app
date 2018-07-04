@@ -112,8 +112,6 @@ class GuestbookAllPosted extends Component {
 
 function mapStateToProps({ guestbooks }) {
 
-    console.log('guestbooks: ', guestbooks);
-
     return ({ guestbooks });
 
 }

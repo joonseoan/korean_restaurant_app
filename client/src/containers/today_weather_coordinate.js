@@ -18,8 +18,6 @@ class TodayWeatherCoordinate extends Component  {
 
             startInterval = setInterval(() => {
 
-            console.log('todayWeatherInfo (lat, lng) input', lat, lng)
-
             this.props.todayWeatherInfo(lat, lng);
             
         }, 300000); 

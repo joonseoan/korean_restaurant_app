@@ -158,8 +158,6 @@ export function fetchLoginUserGuestbooks() {
 
     const request = axios.get('/loginGuestbooks');
 
-    console.log('request: ', request);
-
     return ({
 
         type: FETCH_LOGIN_GUESTBOOK,

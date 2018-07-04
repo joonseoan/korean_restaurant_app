@@ -400,9 +400,6 @@ class MenuList extends Component {
 
     render () {
 
-        console.log('this.state.name_price : ', this.state.name_price);
-
-
         if(!this.props) return <div/>;    
 
         if(this.state.newPage) 

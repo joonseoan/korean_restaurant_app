@@ -425,8 +425,6 @@ class GuestbookNewCreated extends Component {
 
 function validate(values) {
 
-    console.log(values, 'values');
-
     const err = {};
 
     if(!values.likeDislike) {
