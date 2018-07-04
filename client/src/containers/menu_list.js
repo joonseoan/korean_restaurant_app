@@ -31,12 +31,34 @@ class MenuList extends Component {
 
     }
 
-    componentDidMount() {
+    // componentDidMount() {
 
-        window.localStorage.setItem('menuChecked', JSON.stringify(this.state.name_price));
+    //    const checkedValue = JSON.parse(window.localStorage.menuChecked);
+        
+    //    console.log('checkedValue: ', checkedValue);
+       
+    //    this.setState( { name_price : checkedValue });
+       
 
-        this.checkedValueControl(); 
-    }
+    //    console.log('this.state.name_price', this.state.name_price)
+
+    //     _.each(checkedValue, ({name}) => {
+
+    //         let readyToOrder = document.querySelector(`input.${removeSpace(name)}`);
+            
+    //         readyToOrder.checked = true;
+
+    //         const color = !readyToOrder.checked ? '' : '#FAFAD2';
+
+    //         document.querySelectorAll(`td.${removeSpace(name)}`)[0]
+    //             .style.backgroundColor = color;
+
+    //         document.querySelectorAll(`td.${removeSpace(name)}`)[1]
+    //                 .style.backgroundColor = color;
+
+    //     })
+
+    // }
 
         // componentWillReceiveProps(nextProps) {
 
@@ -53,51 +75,26 @@ class MenuList extends Component {
 
         // }
 
-    checkedValueControl() {
-
-        const checkedValue = JSON.parse(window.localStorage.menuChecked);
-
-        console.log(checkedValue);
-
-        _.each(checkedValue, ({ name }) => {
-
-            const dd = document.querySelector(`input.${removeSpace(name)}`)
-            dd.checked = true;
-
-            const color = !dd.checked ? '' : '#FAFAD2';
-
-            document.querySelectorAll(`td.${removeSpace(name)}`)[0]
-                .style.backgroundColor = color;
-
-            document.querySelectorAll(`td.${removeSpace(name)}`)[1]
-                    .style.backgroundColor = color;
-
-        })
-
-
-    }
 
     menuOnChange(event) {
 
         const { name, value, checked } = event.target;
 
-        //console.log ('vlue and check: ', value, checked)
-
         const label = document.querySelector(`label.${removeSpace(name)}`);
 
         let number = Number(label.innerHTML); 
 
-        let current_name_price = this.state.name_price;
+        // let current_name_price = this.state.name_price;
 
         if (!checked) { 
 
-            current_name_price.forEach(menu => {
+            this.state.name_price.forEach(menu => {
 
             if (menu.name === name) {
 
-                const index = current_name_price.indexOf(menu);
+                const index = this.state.name_price.indexOf(menu);
 
-                current_name_price.splice(index, 1);
+                this.state.name_price.splice(index, 1);
 
             }
 
@@ -105,18 +102,21 @@ class MenuList extends Component {
 
         } else {
 
-            current_name_price = [ ...current_name_price, { name, value, checked, number } ];
+            this.setState({  
+            
+                name_price: [ ...this.state.name_price, { name, value, checked, number }]
+    
+            });
+
+           // [...this.state.name_price, {name, value, checked, number }];
+
+            // current_name_price = [ ...current_name_price, { name, value, checked, number } ];
+
+            // console.log('current_name_price: ', current_name_price);
 
         }
 
-        this.setState({  
-            
-            name_price: current_name_price
-
-        });
-
         const color = !checked ? '' : '#FAFAD2';
-
 
         document.querySelectorAll(`td.${removeSpace(name)}`)[0]
                 .style.backgroundColor = color;
@@ -125,7 +125,6 @@ class MenuList extends Component {
                     .style.backgroundColor = color;
 
         document.querySelector(`div.${removeSpace(name)}`).style.display = `${!checked ? 'none' : 'block'}`;
-        
         
     }
     
@@ -189,7 +188,6 @@ class MenuList extends Component {
                 
                 find.number = buttonValues;
 
-                // console.log('find a number of orders: ', find);
             }
 
         });
@@ -297,6 +295,7 @@ class MenuList extends Component {
             return (
     
                 <td key = { item.name } className = { removeSpace(item.name) } id = "all-pictures" width = '200' >
+                    {/* <Link to = { `/description/${item.name}`} key = { item.id } onClick = { this.setTempStorage.bind(this) }> */}
                     <Link to = { `/description/${item.name}`} key = { item.id }>
 
                         <div className = 'btn' style = {{ marginBottom : '20px'}}>
@@ -392,13 +391,17 @@ class MenuList extends Component {
 
     }
 
-    /* setLocalStorage() {
-        
-        window.localStorage.setItem('menuChecked', JSON.stringify(this.state.name_price));
+    // setTempStorage() {
 
-    } */
+    //     window.localStorage.setItem('menuChecked', JSON.stringify(this.state.name_price));
+
+    //     // console.log('setWindowLocalStorage: ', window.localStorage);
+    // }
 
     render () {
+
+        console.log('this.state.name_price : ', this.state.name_price);
+
 
         if(!this.props) return <div/>;    
 

@@ -16,8 +16,6 @@ class Bill extends Component {
 
     orderList(order) {
 
-        console.log('order: ', order)
-
         const { name, value, number } = order;
 
         const unitPrice = parseFloat(value);
