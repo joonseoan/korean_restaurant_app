@@ -74,7 +74,7 @@ class RecommendationDescriptions extends Component {
 
                 return (
 
-                    <li key = { guestbook._id } className = 'card purple darken-1 card-content white-text'
+                    <li key = { guestbook._id } className = 'card yellow lighten-5 card-content'
                         style = {{ paddingTop : '0px'}}
                     >
 
