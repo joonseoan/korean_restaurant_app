@@ -14,6 +14,8 @@ function roundData (weather) {
 
 function weatherImage(mainWeather) {
 
+    console.log(mainWeather);
+
     const image = regexFilter (mainWeather);
 
     const src = `../images/${ image }.PNG`;
@@ -30,7 +32,9 @@ function TodayWeather (props) {
 
         const weather = props.todayWeather;
         const additionalWeather = props.additionalTodayWeather;
-        const { lat, lng } = props.branchLocation.results[0].geometry.location; 
+        const { lat, lng } = props.branchLocation.results[0].geometry.location;
+        
+        console.log(lat, lng)
 
         return(
         
