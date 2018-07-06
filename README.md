@@ -1,7 +1,7 @@
-# Real-Time Menu Recommendation Order Based on Weather Change : React, Node, and MongoDB
+# Real-Time Menu Recommendation Order Based on Weather Change built by React, Node, and MongoDB
 
-## React: ReduxForm, GoogleMAP, DarkSky, OpenWeather and etc.
-## Node : Express, Mocha, and etc
+## Front : React (ReduxForm, GoogleMAP, DarkSky, OpenWeather and etc.)
+## Back : Node (Express, Mocha, and etc.)
 
 ## Main Concept:
 ### Weather is one of the most powerful element that impacts on a menu choice in a restaurant.
