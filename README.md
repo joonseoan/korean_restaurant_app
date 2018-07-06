@@ -63,13 +63,16 @@
 #####     - and hiding "Delete" button without login
 ##### ![Post](post.PNG)
 ##### 1.4.3 Login
-#####     - rendering a form that the customers enter email and password to delete their posts 
+#####     - rendering a form where the customers enter email and password to delete their posts 
 #####     - and functioning validation about email and password
 ##### ![Login](find_post.PNG)
 ##### 1.4.4 Individual Customer's Posting Board
-#####     - rendering a form that the customers enter email and password to delete their posts 
-#####     - and functioning validation about email and password
+#####     - displaying lists of individual customer's posts as they logged in
+#####     - FYI, all data are pulled out of mlab through node
 ##### ![Customer_Board](customer_board.PNG)
+##### 1.4.5 Customer Post
+#####     - displaying a "Delete" button only when the customer logged in 
+##### ![Customer_Board](customer_post.PNG)
 
 
 
