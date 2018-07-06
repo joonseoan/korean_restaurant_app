@@ -6,19 +6,19 @@ function soup (temp, value, soup) {
 
     // console.log('soup', soup)
 
-    if (temp > 25) {
+    if (temp > 28) {
 
        value = value + 0;
 
-    } else if (temp > 20 && temp <= 25) {
+    } else if (temp > 25 && temp <= 28) {
 
         value = value + 1;
 
-    } else if (temp > 15 && temp <= 20) {
+    } else if (temp > 23 && temp <= 25) {
 
         value = value + 2;
 
-    } else if (temp > 10 && temp <= 15) {
+    } else if (temp > 20 && temp <= 23) {
 
         value = value + 3;
 
@@ -50,19 +50,19 @@ function soup (temp, value, soup) {
 
 function main(temp, value, main) {
 
-    if (temp > 25) {
+    if (temp > 28) {
 
         value = value + 0;
  
-     } else if (temp > 21 && temp <= 25) {
+     } else if (temp > 26 && temp <= 28) {
  
          value = value + 1;
  
-     } else if (temp > 17 && temp <= 21) {
+     } else if (temp > 23 && temp <= 26) {
  
          value = value + 2;
  
-     } else if (temp > 10 && temp <= 17) {
+     } else if (temp > 20 && temp <= 23) {
  
          value = value + 3;
  
@@ -94,19 +94,19 @@ function main(temp, value, main) {
 
 function side(temp, value, side) {
 
-    if (temp > 25) {
+    if (temp > 28) {
 
         value = value + 0;
  
-     } else if (temp > 20 && temp <= 25) {
+     } else if (temp > 24 && temp <= 28) {
  
          value = value + 1;
  
-     } else if (temp > 15 && temp <= 20) {
+     } else if (temp > 20 && temp <= 24) {
  
          value = value + 2;
  
-     } else if (temp > 10 && temp <= 15) {
+     } else if (temp > 16 && temp <= 20) {
  
          value = value + 3;
  

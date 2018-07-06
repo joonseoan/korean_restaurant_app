@@ -1,10 +1,13 @@
 import _ from 'lodash';
 
-const weatherCategories = [ 'Clear', 'Cloud', 'Drizzle', 'Mist', 'Rain', 'Snow', 'Haze', 'Thunderstorm', 'windBearing' ];
+const weatherCategories = [ 'Clear', 'Cloud', 'Drizzle', 'Mist', 'Rain', 'Snow', 'Haze', 'Thunderstorm', 'windBearing', 'Breezy' ];
 
 export function regexFilter(weather) {
+
+    console.log('weather in main: ', weather)
     
     let result;
+
     _.each(weatherCategories, data => {
 
         const patt = new RegExp(`${data}+`, 'i');
