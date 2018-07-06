@@ -7,10 +7,11 @@
 #### Weather is one of the most powerful element that impacts on a menu choice in a restaurant. As enclosing this real-time weather information, the applicat makes customers intuitively choose and order their favorit foods in a bit.
 
 ## App Structure :
-#### Restaurant Branches, Real-Time Weather based on Locations, Recommendation Menus based on preset weather info, Food Details, Menu Order,  Guesbooks(containing Customer's Food Evaluation and Recommendation), Guestbook Management, and Login & Logout
+#### Restaurant Branches, Real-Time Weather based on Locations, Recommendation Menus based on preset weather info, Food Details, Menu Order, Guesbooks(containing Customer's Food Evaluation and Recommendation), Guestbook Management, and Login & Logout
 
 ### 1. Main Page : Restaurant Location, Real-Time Weather Info, Menu Recommendation, Food Details, and Menu Order
 #### 1.1 Restaurant Location an Real-Time Weather Info
+####      - renders different weather information in terms of location
 #### Toronto Restaurant
 #### ![Main Page1](weather_t.PNG)
 #### Vancouver Restaurant
