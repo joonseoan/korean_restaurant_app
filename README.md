@@ -9,9 +9,9 @@
 ## App Structure :
 #### Restaurant Branches, Real-Time Weather based on Locations, Recommendation Menus based on preset weather info, Food Details, Menu Order,  Guesbooks(containing Customer's Food Evaluation and Recommendation), Guestbook Management, and Login & Logout
 
-### Main Page : Restaurant Location, Real-Time Weather Info, Menu Recommendation, Food Details, and Menu Order
-#### 1. Restaurant Location an Real-Time Weather Info
-## Toronto Restaurant
-## ![Main Page1](weather_t.PNG)
-## Vancouver Restaurant
-## ![Main_Page2](weather_v.PNG)
+### 1. Main Page : Restaurant Location, Real-Time Weather Info, Menu Recommendation, Food Details, and Menu Order
+#### 1.1 Restaurant Location an Real-Time Weather Info
+#### Toronto Restaurant
+#### ![Main Page1](weather_t.PNG)
+#### Vancouver Restaurant
+#### ![Main_Page2](weather_v.PNG)
