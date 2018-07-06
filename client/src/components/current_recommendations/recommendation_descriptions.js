@@ -75,7 +75,7 @@ class RecommendationDescriptions extends Component {
                 return (
 
                     <li key = { guestbook._id } className = 'card yellow lighten-5 card-content'
-                        style = {{ paddingTop : '0px'}}
+                        style = {{ paddingTop : '0px', marginTop : '20px'}}
                     >
 
                         <h3 className = 'card-title'>{ countNumber++ }. { guestbook.title }</h3>
@@ -110,7 +110,7 @@ class RecommendationDescriptions extends Component {
 
             <div>
         
-                <div className = 'card white darken-1'>
+                <div className = 'white darken-1' >
 
                     <h3 className = 'center z-depth-4 red lighten-2' style = {{ color : 'white',
                                                                                 fontStyle : 'italic', 
@@ -122,7 +122,7 @@ class RecommendationDescriptions extends Component {
                     
                     <img src = { path + file } alt = { spicy } width = '500' height = '300' 
                         style = {{ border: '1px solid #ddd', borderRadius: '4px', padding: '5px',
-                                     position : 'relative', left : '200px' }}/>
+                                     marginLeft : '27%', marginTop: '30px'}} />
             
                     <p style = {{ fontSize : '1.5em', marginTop : '20px', textAlign : 'center'}}>
                     
@@ -134,14 +134,14 @@ class RecommendationDescriptions extends Component {
 
                         <h4 style = {{ textAlign : 'center',  textDecoration : 'underline', color : 'white',
                                     fontStyle : 'italic', fontFamily : 'monospace', width : '500px', 
-                                    position : 'relative', left: '200px' }}
+                                    marginLeft : '30%', marginTop: '30px'}}
                             className = 'center z-depth-4 pink lighten-2'> 
                             
                             CUSTOMER'S REVIEW 
                         
                         </h4>
 
-                        <ul style = {{ width : '700px', position : 'relative', left : '100px'}}>
+                        <ul style = {{ width : '700px', margin : 'auto' }}>
 
                             { this.foodGuestbooks(guestbooks) }
 
