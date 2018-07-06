@@ -1,5 +1,4 @@
-# Real-Time Menu Recommendation Order Based on Weather Change
-# : React, Node, and MongoDB
+# Real-Time Menu Recommendation Order Based on Weather Change : React, Node, and MongoDB
 
 ## React: ReduxForm, GoogleMAP, DarkSky, OpenWeather and etc.
 ## Node : Express, Mocha, and etc
