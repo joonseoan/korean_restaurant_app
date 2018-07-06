@@ -27,4 +27,4 @@
 ####      - rendering checkbox button, "+" in circles for customers to choose menus
 ####      - dipalying simple and intuitive buttons for customers to finalize a number of orders
 ####      - linking to detail food description pages which also shows the customers the previous customer's recommendation
-##### ![Menu_Order](menu_order.PNG)
+
