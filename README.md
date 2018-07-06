@@ -10,9 +10,19 @@
 #### Restaurant Branches, Real-Time Weather based on Locations, Recommendation Menus based on preset weather info, Food Details, Menu Order, Guesbooks(containing Customer's Food Evaluation and Recommendation), Guestbook Management, and Login & Logout
 
 ### 1. Main Page : Restaurant Location, Real-Time Weather Info, Menu Recommendation, Food Details, and Menu Order
-#### 1.1 Restaurant Location an Real-Time Weather Info
-####      - renders different weather information in terms of location
-#### Toronto Restaurant
-#### ![Main Page1](weather_t.PNG)
-#### Vancouver Restaurant
-#### ![Main_Page2](weather_v.PNG)
+#### 1.1 Restaurant Location and Weather Information
+####      - displaying Local weather information 
+####      - updating weather information every 5 minutes 
+####      - and utilizing OpenWeatherMap, DarkSky, and GoogleMap modules
+##### Toronto Restaurant
+###### ![Main Page1](weather_t.PNG)
+##### Vancouver Restaurant
+##### ![Main_Page2](weather_v.PNG)
+#### 1.2 Recommendatiion Menus  
+####      - implementing weather information in the background
+####      - updating new recommendation menus every 5 minutes
+####      - and using a customized recommendation engine
+##### Toronto Restaurant
+###### ![Recommendation_Menu](menu_recommendation.PNG)
+##### 
+##### 
