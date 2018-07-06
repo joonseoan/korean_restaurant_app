@@ -14,15 +14,17 @@
 ####      - displaying Local weather information 
 ####      - updating weather information every 5 minutes 
 ####      - and utilizing OpenWeatherMap, DarkSky, and GoogleMap modules
-##### Toronto Restaurant
-###### ![Main Page1](weather_t.PNG)
-##### Vancouver Restaurant
+##### [Toronto Restaurant]
+##### ![Main Page1](weather_t.PNG)
+##### [Vancouver Restaurant]
 ##### ![Main_Page2](weather_v.PNG)
 #### 1.2 Recommendatiion Menus  
 ####      - implementing weather information in the background
 ####      - updating new recommendation menus every 5 minutes
 ####      - and using a customized recommendation engine
-##### Toronto Restaurant
-###### ![Recommendation_Menu](menu_recommendation.PNG)
-##### 
-##### 
+##### ![Recommendation_Menu](menu_recommendation.PNG)
+#### 1.3 Menu & Order  
+####      - rendering checkbox button, "+" in circles for customers to choose menus
+####      - dipalying simple and intuitive buttons for customers to finalize a number of orders
+####      - linking to detail food description pages which also shows the customers the previous customer's recommendation
+##### ![Menu_Order](menu_order.PNG)
