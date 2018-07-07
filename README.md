@@ -1,7 +1,7 @@
 # Real-Time Menu Recommendation and Order Application Based on Weather Change built by React, Node, and MongoDB
 
-## Front : React (Redux, Redux Form to wire up GoogleMAP, DarkSky and OpenWeather API data)
-## Back : Node (Express and Mocha)
+## Front : React (redux, reduxForm to wire up GoogleMAP, DarkSky and OpenWeather API data)
+## Back : Node (express and mocha)
 
 ## Application Concept :
 #### Weather always impacts on a menu choice in a restaurant. As enclosing this real-time weather information, the application helps customers intuitively choose and order their favorit foods in a bit.
