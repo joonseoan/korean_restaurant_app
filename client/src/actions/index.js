@@ -19,8 +19,8 @@ import { FETCH_GUESTBOOKS,
 
 
 
-const TodayURL = `http://api.openweathermap.org/data/2.5/weather?appid=${ process.env.Open_Weather_Key }`;
-const GoogleURL = 'http://maps.googleapis.com/maps/api/geocode/json?address';
+const TodayURL = `https://api.openweathermap.org/data/2.5/weather?appid=${ process.env.Open_Weather_Key }`;
+const GoogleURL = 'https://maps.googleapis.com/maps/api/geocode/json?address';
 // const guestbookURL = 'https://vast-wave-33154.herokuapp.com';
 
 export function location(branch_city) {
