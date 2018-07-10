@@ -16,10 +16,8 @@
 .env.test.local
 .env.production.local
 
-keyValue.js
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-keyValue.js
+/actions/keyValue
