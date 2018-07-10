@@ -5,9 +5,9 @@ import { FETCH_LOCATION,
          FETCH_TODAY_WEATHER,
          FETCH_ADDITIONAL_TODAY_WEATHER } from './fetch_weather';
 
-import { Open_Weather_Key,
-         DarkSky_Weather_Key,
-         Gmap_Api_Key } from './keyValue';
+// import { Open_Weather_Key,
+//          DarkSky_Weather_Key,
+//          Gmap_Api_Key } from './keyValue';
 
 import { FETCH_GUESTBOOKS,
          CREATE_GUESTBOOK,
@@ -17,13 +17,15 @@ import { FETCH_GUESTBOOKS,
          USER_LOGIN,
          FETCH_LOGIN_GUESTBOOK } from './fetch_guestbooks';
 
-const TodayURL = `https://api.openweathermap.org/data/2.5/weather?appid=${Open_Weather_Key}`;
+
+
+const TodayURL = `https://api.openweathermap.org/data/2.5/weather?appid=${ process.env.Open_Weather_Key }`;
 const GoogleURL = 'https://maps.googleapis.com/maps/api/geocode/json?address';
 // const guestbookURL = 'https://vast-wave-33154.herokuapp.com';
 
 export function location(branch_city) {
 
-    const  URL = `${GoogleURL}=${branch_city}&key=${Gmap_Api_Key}`;
+    const  URL = `${ GoogleURL }=${branch_city}&key=${ process.env.Gmap_Api_Key }`;
 
     const request = axios.get(URL);
 
@@ -45,7 +47,7 @@ export function todayWeatherInfo (lat, lng) {
     
     };
 
-    DarkSkyApi.apiKey = DarkSky_Weather_Key;
+    DarkSkyApi.apiKey = process.env.DarkSky_Weather_Key;
     const request = DarkSkyApi.loadCurrent(position);
     
     return ({
