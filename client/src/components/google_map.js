@@ -22,7 +22,6 @@ class GoogleMAP extends Component{
 
   });
 
-
   }
 
   componentDidMount() {
