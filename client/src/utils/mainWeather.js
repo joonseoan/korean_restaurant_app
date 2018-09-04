@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const weatherCategories = [ 'Clear', 'Cloud', 'Drizzle', 'Mist', 'Rain', 'Snow', 'Haze', 'Thunderstorm', 'windBearing', 'Breezy', 'Smoke' ];
+const weatherCategories = [ 'Clear', 'Cloud', 'Drizzle', 'Mist', 'Rain', 'Snow', 'Haze', 'Thunderstorm', 'windBearing', 'Breezy', 'Smoke', 'Fog' ];
 
 export function regexFilter(weather) {
 
