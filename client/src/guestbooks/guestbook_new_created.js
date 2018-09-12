@@ -123,6 +123,7 @@ class GuestbookNewCreated extends Component {
                         cols = '50'
                         rows = '10'
                         placeholder = 'Please write your comments for foods or services here.'
+                    
                     />
 
                 </label>
@@ -141,7 +142,7 @@ class GuestbookNewCreated extends Component {
 
     orderedManuList(fields) {
 
-        let { meta : { touched, error}, options, input } = fields;
+        let { meta : { touched, error }, options, input } = fields;
 
         const className = `form-group ${ touched && error ? 'has-danger' : ''}`;
 
