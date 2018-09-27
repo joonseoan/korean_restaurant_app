@@ -126,6 +126,7 @@ class MenuList extends Component {
 
         document.querySelector(`div.${removeSpace(name)}`).style.display = `${!checked ? 'none' : 'block'}`;
         
+        // console.log('document.querySelector(div.${removeSpace(name)}):  ', document.querySelector(`div.${removeSpace(name)}`));        
     }
     
     numberOnChange (event) {
@@ -138,7 +139,7 @@ class MenuList extends Component {
 
         let labelValues = Number(label.innerHTML); 
 
-        const spans = document.querySelectorAll(`span#${CurrentMenuName}`); 
+        const spans = document.querySelectorAll(`span#${CurrentMenuName}`);
         
         const buttons = [1, 2, 3, 4, 5];
 
@@ -194,7 +195,7 @@ class MenuList extends Component {
         
     }
 
-    allMenuContents () {
+    allMenuContents() {
 
         const path = './images/';
 
@@ -216,7 +217,7 @@ class MenuList extends Component {
 
             const buttonDisplay = () =>{
                 
-                const buttons = [1, 2, 3, 4, 5 ]; // please, test it again.
+                const buttons = [ 1, 2, 3, 4, 5 ]; // please, test it again.
 
                 const eachButton = buttons.map(button => {
     
@@ -224,7 +225,7 @@ class MenuList extends Component {
 
                         onClick = { this.numberOnChange.bind(this) } 
                         id = { removeSpace(item.name) } 
-                        className = "btn red lighten-2" style = {{width : '30px', height : '30px'}}>
+                        className = "btn red lighten-2" style = {{width : '30px', height : '30px', marginLeft : 'auto', marginRight:'auto'}}>
                     
                         { button }
                     
@@ -234,7 +235,7 @@ class MenuList extends Component {
 
                 return (
                     
-                    <div>
+                    <div style = {{ marginLeft : 'auto', marginRight:'auto'}}>
                     
                         { eachButton }
 
@@ -242,6 +243,8 @@ class MenuList extends Component {
                             id = { removeSpace(item.name) } 
                             className = "btn red lighten-2" 
                             style = {{width : '30px', height : '30px'}}>+</span>
+
+
                     
                     </div>
                     
@@ -271,7 +274,7 @@ class MenuList extends Component {
     
                         </div>
                                 
-                        <div className = { removeSpace(item.name) } id = "number-input">
+                        <div className = { removeSpace(item.name) } id = "number-input" style={{ textAlign: 'center'}}>
 
                             <div>
                                 Number of Orders: <label className = { removeSpace(item.name) }>1</label>
@@ -294,15 +297,15 @@ class MenuList extends Component {
                
             return (
     
-                <td key = { item.name } className = { removeSpace(item.name) } id = "all-pictures" width = '200' >
+                <td key = { item.name } className = { removeSpace(item.name) } id = "all-pictures" width = '120' >
                     {/* <Link to = { `/description/${item.name}`} key = { item.id } onClick = { this.setTempStorage.bind(this) }> */}
                     <Link to = { `/description/${item.name}`} key = { item.id }>
 
-                        <div className = 'btn' style = {{ marginBottom : '20px'}}>
-                    
+                        <div className = 'btn' style = {{ marginBottom : '20px', fontSize: '8pt'}}>
+
                             Check Detail
-                            <i className="small material-icons" style = {{ verticalAlign : 'middle',
-                            marginLeft : '10px' }}>check</i>
+                            <i className="small material-icons" style = {{ verticalAlign : 'middle', marginLeft: '8px'}}>
+                            check</i>
                     
                         </div>
                             
@@ -426,7 +429,7 @@ class MenuList extends Component {
                     
                     <form onSubmit = { this.submitValue }> 
 
-                        <table className = 'centered responsive-table'>
+                        <table className = 'responsive-table centered'>
 
                             <thead>
                                 <tr>

@@ -4,13 +4,13 @@
   "private": true,
   "proxy": {
     "/guests": {
-      "target": "http://localhost:5000"
+      "target": "http://localhost:4500"
     },
     "/loginGuestbooks": {
-      "target": "http://localhost:5000"
+      "target": "http://localhost:4500"
     },
     "/guests/*": {
-      "target": "http://localhost:5000"
+      "target": "http://localhost:4500"
     }
   },
   "dependencies": {

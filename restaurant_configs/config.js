@@ -10,12 +10,12 @@ if (env === 'production') {
     
 } else if (env === 'development') {
 
-    process.env.PORT = 5000;
+    process.env.PORT = 4500;
     process.env.MONGODB_URI = require('./dev');
 
 } else if (env === 'test') {
 
-    process.env.PORT = 5000; 
+    process.env.PORT = 4500; 
     process.env.MONGODB_URI = 'mongodb://localhost:27017/guestsTest';
 
 }
